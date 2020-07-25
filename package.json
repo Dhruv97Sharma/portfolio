@@ -1,0 +1,16 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "my portfolio webite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Dhruv Sharma",
+  "license": "ISC",
+  "homepage": "https://Dhruv97Sharma.github.io/porfolio",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
