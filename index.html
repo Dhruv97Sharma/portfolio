@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +7,7 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	
 	
-	<link href="main.css" rel="stylesheet" type="text/css">
+	<link id="mystylesheet" href="main.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -21,26 +19,25 @@
        
 		<div class="row">
 			<div class="col-lg-4">
-				<div class="card card-body h-100  border-info" id="profile-wrapper">
+				<div id="cards" class="card card-body h-100 border-info" id="profile-wrapper">
 					<img id="profile-pic" src="images/dhruvsharma.jpeg" >
 					<hr>
 					<h4>Hello Visitor!</h4>
 					<p>I'm Dhruv Sharma, a Computer Science undergrad and enthusiast pursuing effective solutions of
                         problems by creating unique web and mobile applications.</p>
                         <ul class="social-links">
-                            <li><a target="_blank" href="https://github.com/Dhruv97Sharma"><img class="social" src="https://img.favpng.com/1/12/25/github-bitbucket-fork-software-repository-png-favpng-TEbehRM0NEbBUTpb9JebFRUmL_t.jpg"></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/dhruv-sharma-59082313a/"><img class="social" src="https://cdn.iconscout.com/icon/free/png-256/linkedin-32-114604.png"></a></li>
+                            <li><a target="_blank" href="https://github.com/Dhruv97Sharma"><img class="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzpUN6yhPjDbIPLhCSEXdnqaBqCj4IYrrbHw&usqp=CAU"></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/dhruv-sharma-59082313a/"><img class="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0EXOi4dT8VVVN5HCArWWlGMWDTorcRWJQLA&usqp=CAU"></a></li>
                             <li><a target="_blank" href="mailto:ddhuvsharma1997@gmail.com"><img class="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYHIf4Txw2BnwctE7IyacucVaNMM5Vm83zDQ&usqp=CAU"></a></li>
                             
-                            
-                        </ul>
+      	                </ul>
 				</div>
 			</div>
             
 
         
 			<div class="col-lg-8">
-				<div class="card card-body h-100  border-info">
+				<div id="cards" class="card card-body h-100  border-info">
 					<h4>About</h4>
                     <hr>
                     
@@ -48,9 +45,14 @@
 
 					<p>Want to work in a challenging environment which gives me a chance to exploit my extreme interest in the field of Computer Science, fulfill my desire to do something out of the box for my organisation, explore and grow my skills and talent in the process.</p>
 
-                    <p>I still look out for interviews in search of great teams & projects that interest me: <a target="_blank" href="/assets/DhruvSharma.pdf">Download Resume</a></p>
-                    
-
+                    <p>I still look out for interviews in search of great teams & projects that interest me: <a target="_blank" href="./assets/DhruvSharma.pdf">Download Resume</a></p>
+                <div class="row">
+					<div class="col-sm-4">
+					<button class="btn btn-light" onclick="swapStyle('main.css')">Light Mode</button>
+					
+					<button class="btn btn-dark" onclick="swapStyle('dark.css')">Dark Mode</button>
+					</div>
+				</div>
 				</div>
             </div>
        
@@ -108,7 +110,7 @@
 
 		<div class="row">
 			<div class="col-lg-5">
-				<div class="card card-body h-100">
+				<div id="cards" class="card border-light card-body h-100">
 					<h5>My Experience as a Developer</h5>
 					<hr>
 					<p>Full stack developer at QLS Academy Pvt. Ltd.</p>
@@ -117,7 +119,7 @@
 			</div>
 
 			<div class="col-lg-7">
-				<div class="card card-body h-100">
+				<div id="cards" class="card border-light card-body h-100">
 					<h5>What I Know</h5>
 					<hr>
 					<p> Having experience working on different projects and technologies which I personally built and also completed in teams on Python, Django, django-rest framework, flask, AngularJS, Angular, Ionic and APIs such as google maps, VirusTotal and a whole bunch more I can’t possibly mention in one sentence! ;)</p>
@@ -147,7 +149,7 @@
         
 		<div class="row">
 			<div class="col-lg-5">
-				<div class="card card-body h-100">
+				<div id="cards" class="card border-light card-body h-100">
 					<h5>How I Learn</h5>
 					<hr>
 					<p>Reverse Engineer & Build Ugly Prototypes First.</p>
@@ -157,7 +159,7 @@
 			</div>
 
 			<div class="col-lg-7">
-				<div class="card card-body h-100">
+				<div id="cards" class="card border-light card-body h-100">
 					<h5>My Short Term Goals</h5>
 				<hr>
 				
@@ -175,6 +177,19 @@
 	
 	<div id="sb-element"></div>
 	
+	<script>
+		function swapStyle(sheet){
+			document.getElementById('mystylesheet').href = sheet;
+			localStorage.setItem("theme",sheet);
+		}
+
+		var themeValue = localStorage.getItem("theme");
+		if(themeValue != null){
+			swapStyle(themeValue);
+		}else{
+			swapStyle('main.css');
+		}
+	</script>
 	
 </body>
 </html>

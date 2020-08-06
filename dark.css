@@ -1,23 +1,25 @@
+
+
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #F8F8F8!important;
+    background-color: rgb(36, 41, 46) !important;
     scroll-behavior: smooth;
 }
 
 :root{
-	--mainColor:#eaeaea;
-	--secondaryColor:#fff;
+	--mainColor:rgb(36, 41, 46) !important;
+	--secondaryColor:rgb(36, 41, 46) !important;
 
-	--borderColor:#c1c1c1;
+	--borderColor:white;
 
-	--mainText:black;
-	--secondaryText:#4b5156;
+	--mainText:white;
+	--secondaryText:rgba(241, 241, 233, 0.8);
 
-	--themeDotBorder:#24292e;
+	--themeDotBorder:#f0ead6;
 
-	--previewBg:rgb(251, 249, 243, 0.8);
-	--previewShadow:#f0ead6;
+	--previewBg:rgba(241, 241, 233, 0.8);
+	--previewShadow:#f9f7d9;
 
 
 	--buttonColor:black;
@@ -37,10 +39,6 @@ p, li, span, label, input, textarea{
 	font-family: 'Roboto Mono', monospace;
 }
 
-a{
-	text-decoration: none;
-	color:#17a2b8;
-}
 
 ul{
 	list-style: none;
@@ -73,14 +71,7 @@ h6 { font-size: 16px;}
 #profile-wrapper{
     text-align: center;
 }
-/*
-#profile-pic{
-    width: 180px;
-    height: 200px;
-    border-radius: 100%;
-    margin: auto;
-}
-*/
+
 #profile-pic{
 	display: block;
 	margin:0 auto;
@@ -115,17 +106,17 @@ h6 { font-size: 16px;}
 }
 
 .post-preview{
-	background-color: #fff;
+	background-color: rgb(14, 4, 4);
 	padding:15px;
 }
 
 .post-title{
-	color:black;
+	color:#ffe4e4;
 	margin: 0;
 }
 
 .post-intro{
-	color:#4b5156;
+	color:#f9f7d9;
 	font-size: 14px;
 }
 
@@ -152,7 +143,8 @@ h6 { font-size: 16px;}
 #skills li{
     display: flex;
     justify-content: space-evenly;
-	background-color: var(--previewShadow);
+    background-color: var(--previewShadow);
+    color: #4b5156;
 }
 
 ul{
@@ -167,12 +159,12 @@ display: inline-block;
 
 
 .social{
-width: 30px;
-height: 30px;
-object-fit: cover;
-border:2px solid var(--borderColor);
-border-radius: 50%;
-}
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    
+    border-radius: 50%;
+    }
 
 #theme-options-wrapper{
 	display: flex;
@@ -202,7 +194,7 @@ border-radius: 50%;
 
 
 #light-mode{
-	background-color: #fff;
+	background-color: rgb(36, 41, 46) !important;;
 }
 
 #blue-mode{
@@ -217,7 +209,15 @@ border-radius: 50%;
 	background-color: #7E4C74;
 }
 
+#cards{
+	border: 2px solid rgb(24, 26, 31);
+	border-radius: 5px;
+    background-color: rgb(49, 54, 63) !important;
+}
 
+#cards>hr{
+    background-color: white;
+}
 
 @media screen and (max-width: 1200px){
 	.main-container{
